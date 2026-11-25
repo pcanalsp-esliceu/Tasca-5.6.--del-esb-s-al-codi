@@ -1,0 +1,81 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --fosc: #1f2a36;
+    --blau: #2b4c7e;
+    --groc: #f4d35e;
+    --fons: #eef1f5;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fons);
+    color: var(--fosc);
+}
+
+h1,h2,h3,p {
+    margin: 0 0 8px;
+}
+
+.pagina > * {
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.cabecera {
+    background-color: var(--blau);
+}
+
+.hero {
+    background-color: green;
+}
+
+.tarjeta {
+    background-color: blue;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.llamada {
+    background-color: orange;
+}
+
+.pie {
+    background-color: var(--fosc);
+}
+
+.pagina {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    gap: 16px;
+}
+
+.cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    margin: 0;
+}
+
+.servicios {
+    padding: 0;
+    display: grid;
+    gap: 16px;
+}
