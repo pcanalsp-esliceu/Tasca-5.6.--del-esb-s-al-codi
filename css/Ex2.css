@@ -1,0 +1,120 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --fosc: #1f2a36;
+    --blau: #2b4c7e;
+    --groc: #f4d35e;
+    --fons: #eef1f5;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fons);
+}
+
+h1,h2,h3, p {
+    margin: 0 0 8px;
+}
+
+.cabecera {
+    background-color: var(--blau);
+}
+
+.menu {
+    background-color: var(--fosc);
+}
+
+.contenido {
+    background-color: white;
+}
+
+.lateral {
+    background-color: var(--groc);
+}
+
+.pie {
+    background-color: var(--fosc);
+}
+
+.pagina > * {
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.pagina {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    gap: 16px;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+}
+
+.cabecera {
+    grid-area: cab;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.contenido {
+    grid-area: contenido;
+}
+
+.lateral {
+    grid-area: lateral;
+}
+
+.pie {
+    grid-area: pie;
+}
+
+.pagina {
+    grid-template-areas: 
+        "cab"
+        "menu"
+        "contenido"
+        "lateral"
+        "pie"
+    ;
+}
+
+@media (min-width: 768px) {
+    .pagina {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "cab cab"
+            "menu contenido"
+            "menu pie"
+        ;
+    }
+    .lateral{
+        display: none;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+}
